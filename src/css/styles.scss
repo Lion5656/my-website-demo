@@ -1,0 +1,331 @@
+@import "bootstrap/scss/bootstrap";
+/*
+  全域設定
+*/
+:root {
+  --default-font: "Noto Sans TC",  system-ui, -apple-system, "Segoe UI", Roboto;
+  --heading-font: "Raleway",  sans-serif;
+  --nav-font: "Poppins",  sans-serif;
+  --sidebar-width: 300px;
+}
+
+:root { 
+  --background-color: #ffffff; 
+  --default-color: #1e293b;    
+  --heading-color: #020617;    
+  --accent-color: #00BCFF;     
+  --surface-color: #ffffff;    
+  --contrast-color: #f1f5f9;
+  --border-color: #e2e8f0;
+  --transition-normal: all 0.3s ease-in-out;
+}
+
+.light-background {
+  --background-color: #f4fafd;
+  --surface-color: #2dc7f1d4;
+}
+
+.dark-background {
+  --background-color: #040b14;
+  --default-color: #040b14;
+  --heading-color: #ffffff;
+  --surface-color: #151f2b;
+  --contrast-color: #ffffff;
+}
+
+.container {
+  padding: 60px 10px 20px 10px;
+}
+
+.container.section-title {
+  margin: 10px 0px;
+}
+
+.section-title h2 {
+  position: relative;
+  padding-bottom: 15px;
+  font-size: 60px;
+}
+
+.section-title h2::after{
+  content: "";
+  display: block;
+  position: absolute;
+  background: var(--accent-color);
+  width: 120px;
+  height: 5px;
+  bottom: 0;
+  left: 0;
+}
+
+/*
+  左側導覽列
+*/
+.header {
+  background-color: var(--default-color);
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  padding: 0 15px;
+  width: var(--sidebar-width);
+  transition: all ease-in-out 0.3s;
+  overflow-y: auto;
+  z-index: 9;
+  border-right: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
+}
+
+.header a {
+  text-decoration: none;
+}
+
+.header a:hover {
+  color: color-mix(in srgb, var(--accent-color), transparent 15%);
+  text-decoration: underline;
+}
+
+.header .logo h1{
+  font-size: 24px;
+  font-weight: bold;
+  color: var(--heading-color)
+}
+
+.header .profile-img img{
+  display: block;
+  margin: 15px auto;
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+}
+
+.header .social-links a{
+  margin: 5px 0px 15px 10px;
+  display: inline-flex;
+  color: #8b8b8b;
+  background-color: color-mix(in srgb, var(--default-color), transparent 90%);
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 10px solid color-mix(in srgb, #8b8b8b, transparent 90%);
+  transition: 0.3s;
+}
+
+.header .social-links a:hover{
+  color: var(--accent-color);
+  background-color: color-mix(in srgb, var(--default-color), transparent 70%);
+}
+
+.main {
+  margin-left: var(--sidebar-width);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--heading-font);
+  color: var(--heading-color);
+}
+
+.navmenu {
+    padding: 0;
+    z-index: 9;
+}
+
+.navmenu ul li {
+  list-style: none;
+  margin: 50px auto;
+  font-size: 21px;
+  font-family: var(--nav-font);
+}
+
+.navmenu ul li a {
+  color: #bababa;
+  text-decoration: none;
+}
+
+.navmenu ul li .navicon {
+  margin-right: 10px;
+  font-size: 18px;
+}
+
+.navmenu ul li a:hover {
+  color: color-mix(in srgb, var(--accent-color), transparent 15%);
+  text-decoration: underline;
+}
+
+/*
+  首頁
+*/
+.hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+.hero img {
+  display: block;
+  inset: 0;
+  width: 100%;
+  height: 100%; 
+  z-index: 1;
+  position: absolute;
+  object-fit: cover;
+  object-position: center;
+}
+
+.hero .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--default-font);
+  color: var(--default-color);
+  z-index: 3;
+
+}
+
+.hero .container h1 {
+  font-size: 100px;
+  font-family: var(--heading-font);
+  font-weight: 400;
+  margin-bottom: 20px;
+}
+
+.hero:before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to right, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0) 100%);
+  z-index: 2;
+} 
+/*
+  關於我
+*/
+.about {
+  background-color: var(--background-color);
+  padding: 5px 0;
+  margin: 10px 0;
+}
+
+.about .container .subtitle{
+  font-size: 20px;
+  font-family: var(--default-font);
+  margin: 50px;
+}
+
+.about .container ul {
+  padding: 0 0 30px 0;
+}
+
+.about .container ul li{
+  display: flex;
+  list-style: none;
+  font-size: 22px;
+  font-family: var(--default-font);
+  margin: 30px 0;
+}
+
+.about .container ul li .bi-chevron-right{
+  color: var(--accent-color);
+  font-size: 22px;
+}
+
+.about .container ul li span{
+  margin-left: 10px;
+}
+
+.about .container img{
+  width: 85%;
+  height: 85%;
+  padding: 0;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+/*
+  技能
+*/
+.skill {
+  background-color: var(--background-color);
+  padding: 5px 0;
+  margin: 10px 0;
+}
+
+.skill .container.content{
+  padding: 60px 10px;
+}
+
+.skill .skill-card {
+    background: var(--background-color);
+    border-radius: 12px;
+    padding: 3rem 2rem;
+    position: relative;
+    overflow: hidden;
+    height: 100%;
+    min-height: 300px;
+    min-width: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    text-align: left;
+    z-index: 1;
+}
+
+.skill .skill-card i {
+    font-size: 30px;
+    color: var(--accent-color);
+    margin-bottom: 15px;
+    transition: var(--transition-normal);
+}
+
+.skill .skill-card h4 {
+    font-size: 32px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.skill .skill-card p {
+    font-size: 20px;
+    margin: 0;
+    color: color-mix(in srgb, var(--default-color), transparent 30%);
+}
+
+.skill .antigravity-card {
+    transition: transform 0.4s cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 0.4s ease, border-color 0.4s ease;
+}
+
+.skill .antigravity-card:before{
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  background: linear-gradient(90deg, #5386f4d4, #49ffd8d4 100%); 
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease-in-out;
+  z-index: 3;
+}
+
+/* 反重力浮動與陰影效果 */
+.skill .antigravity-card:hover{
+    transform: translateY(-10px);
+    box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(20px);
+    border-color: var(--accent-color);
+    background-color: #c1ddff;
+    opacity: 0.9;
+}
+
+/* 讓上方漸層線條在 Hover 時跑出來 */
+.skill .antigravity-card:hover:before {
+    transform: scaleX(1);
+}
+
+/* 在卡片 Hover 時縮放 Icon */
+.skill .antigravity-card:hover i {
+    transform: scale(1.25) translateY(-10px);
+}
