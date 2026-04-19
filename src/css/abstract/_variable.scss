@@ -1,0 +1,23 @@
+$theme-vars: (
+    "default-font": ("Noto Sans TC",  system-ui, apple-system, "Segoe UI", Roboto),
+    "heading-font": ("Raleway",  sans-serif),
+    "nav-font": ("Poppins",  sans-serif),
+    "sidebar-width": 300px,
+    "background-color": #ffffff,
+    "default-color": #1e293b,
+    "heading-color": #020617,
+    "accent-color": #00BCFF,
+    "surface-color": #ffffff,
+    "contrast-color": #f1f5f9,
+    "border-color": #e2e8f0,
+    "transition-normal": all 0.3s ease-in-out
+);
+
+/*
+  全域變數設定
+*/
+:root {
+    @each $key, $value in $theme-vars {
+        --#{$key}: #{$value};
+    }
+}

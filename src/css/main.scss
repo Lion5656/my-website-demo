@@ -1,0 +1,13 @@
+@use "bootstrap/scss/bootstrap";
+
+// 引入抽象層
+@use "abstract/variable";
+
+// 引入基礎層
+@use "base/base";
+@use "base/typography";
+
+// 引入版面層
+@use "layout/header";
+@use "layout/main";
+@use "layout/footer";

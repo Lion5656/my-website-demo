@@ -1,36 +1,10 @@
-@import "bootstrap/scss/bootstrap";
 /*
-  全域設定
+  首頁
 */
-:root {
-  --default-font: "Noto Sans TC",  system-ui, -apple-system, "Segoe UI", Roboto;
-  --heading-font: "Raleway",  sans-serif;
-  --nav-font: "Poppins",  sans-serif;
-  --sidebar-width: 300px;
-}
 
-:root { 
-  --background-color: #ffffff; 
-  --default-color: #1e293b;    
-  --heading-color: #020617;    
-  --accent-color: #00BCFF;     
-  --surface-color: #ffffff;    
-  --contrast-color: #f1f5f9;
-  --border-color: #e2e8f0;
-  --transition-normal: all 0.3s ease-in-out;
-}
-
-.light-background {
-  --background-color: #f4fafd;
-  --surface-color: #2dc7f1d4;
-}
-
-.dark-background {
-  --background-color: #040b14;
-  --default-color: #040b14;
-  --heading-color: #ffffff;
-  --surface-color: #151f2b;
-  --contrast-color: #ffffff;
+.main {
+  min-width: 0;
+  transition: all 0.3s ease;
 }
 
 .app-container {
@@ -50,6 +24,13 @@
   margin: 10px 0px;
 }
 
+.text-gradient {
+  background: linear-gradient(90deg, #5386f4d4, #49ffd8d4 100%); 
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
 .section-title h2 {
   position: relative;
   padding-bottom: 15px;
@@ -65,131 +46,20 @@
   height: 5px;
   bottom: 0;
   left: 0;
+  border-radius: 5px;
 }
 
-/*
-  左側導覽列
-*/
-.header {
-  background-color: var(--default-color);
-  position: sticky;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  padding: 0 15px;
-  width: var(--sidebar-width);
-  height: 100vh;
-  transition: all ease-in-out 0.3s;
-  overflow-y: auto;
-  z-index: 9;
-  border-right: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
-  transition: all 0.3s ease;
-}
-
-/* active 隱藏側邊欄 */
-.header.active{
-  margin-left: calc(-1 * var(--sidebar-width));
-}
-
-.header .header-toggle {
-  color: var(--contrast-color);
-  cursor: pointer;
-  font-size: 24px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: absolute;
-  top: 25px;
-  z-index: 10;
-}
-
-.header a {
-  text-decoration: none;
-}
-
-.header a:hover {
-  color: color-mix(in srgb, var(--accent-color), transparent 15%);
-  text-decoration: underline;
-}
-
-.header .logo h1{
-  font-size: 24px;
-  font-weight: bold;
-  color: var(--heading-color)
-}
-
-.header .profile-img img{
-  display: block;
-  margin: 15px auto;
-  width: 120px;
-  height: 120px;
-  object-fit: cover;
-}
-
-.header .social-links a{
-  margin: 5px 0px 15px 10px;
-  display: inline-flex;
-  color: #dbd0d0;
-  background-color: color-mix(in srgb, var(--default-color), transparent 90%);
-  justify-content: center;
-  align-items: center;
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  border: 10px solid color-mix(in srgb, #8b8b8b, transparent 90%);
-  transition: 0.3s;
-}
-
-.header .social-links a:hover{
-  color: var(--accent-color);
-  background-color: color-mix(in srgb, var(--default-color), transparent 70%);
-}
-
-.main {
-  min-width: 0;
-  transition: all 0.3s ease;
-}
-
-h1, h2, h3, h4, h5, h6 {
-  font-family: var(--heading-font);
-  color: var(--heading-color);
-}
-
-.navmenu {
-    padding: 0;
-    z-index: 9;
-}
-
-.navmenu ul li {
-  list-style: none;
-  margin: 50px auto;
-  font-size: 21px;
-  font-family: var(--nav-font);
-}
-
-.navmenu ul li a {
-  color: #bababa;
-  text-decoration: none;
-}
-
-.navmenu ul li .navicon {
-  margin-right: 10px;
-  font-size: 18px;
-}
-
-.navmenu ul li a:hover {
-  color: color-mix(in srgb, var(--accent-color), transparent 15%);
-  text-decoration: underline;
-}
-
-/*
-  首頁
-*/
 .hero {
   position: relative;
   min-height: 100vh;
   display: flex;
   align-items: center;
+}
+
+.hero .hero-title {
+  display: inline-block;
+  width: max-content;
+  max-width: 100%;
 }
 
 .hero img {
@@ -278,11 +148,17 @@ h1, h2, h3, h4, h5, h6 {
 .skill {
   background-color: var(--background-color);
   padding: 5px 0;
-  margin: 10px 0;
+  margin: 10px 0 20px 0;
 }
 
 .skill .container.content{
   padding: 60px 10px;
+}
+
+.skill .container .subtitle{
+  font-size: 20px;
+  font-family: var(--default-font);
+  margin: 50px 50px 30px 50px;
 }
 
 .skill .skill-card {
@@ -358,3 +234,66 @@ h1, h2, h3, h4, h5, h6 {
 .skill .antigravity-card:hover i {
     transform: scale(1.25) translateY(-10px);
 }
+
+/*
+  作品集
+*/
+.portfolio {
+  background-color: #3d4d75ed;
+  font-family: var(--default-font);
+  margin: 10px 0 20px 0;
+}
+
+.portfolio h2{
+  color: var(--contrast-color);
+}
+
+.portfolio .portfolio-header .portfolio-title {
+  flex: 0 0 80%;
+}
+
+.portfolio .container .subtitle{
+  font-size: 20px;
+  font-family: var(--default-font);
+  margin: 50px 50px 20px 50px;
+  color: var(--contrast-color);
+}
+
+
+.portfolio .portfolio-header .portfolio-title h4{
+  color: var(--contrast-color);
+}
+
+.portfolio .portfolio-header .portfolio-meta {
+  flex: 0 0 20%;
+}
+
+.portfolio .portfolio-card{
+    background-color: #1a1549;
+    color: var(--contrast-color);
+    border: 1px solid #638780d4;
+    border-left: 4px solid var(--accent-color);
+    border-radius: 12px;
+    padding: 3rem 2rem;
+    position: relative;
+    overflow: hidden;
+    height: 100%;
+    min-height: 300px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    text-align: left;
+    z-index: 1;
+}
+
+.portfolio .tag{
+  background: rgba(25, 128, 238, 0.1);
+  color: #b6e8ff;
+  padding: 0.5rem 0.8rem;
+  border-radius: 90px;
+  border: 1px solid rgba(25, 128, 238, 0.1);
+}
+
+
