@@ -148,7 +148,8 @@
 .skill {
   background-color: var(--background-color);
   padding: 5px 0;
-  margin: 10px 0 20px 0;
+  margin: 0;
+  height: 100%;
 }
 
 .skill .container.content{
@@ -239,9 +240,9 @@
   作品集
 */
 .portfolio {
-  background-color: #3d4d75ed;
+  background-color: #1c2233;  
   font-family: var(--default-font);
-  margin: 10px 0 20px 0;
+  margin: 0;
 }
 
 .portfolio h2{
@@ -269,10 +270,10 @@
 }
 
 .portfolio .portfolio-card{
-    background-color: #1a1549;
+    background-color: #1e293b;
     color: var(--contrast-color);
-    border: 1px solid #638780d4;
-    border-left: 4px solid var(--accent-color);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-left: 4px solid #5386f4d4;
     border-radius: 12px;
     padding: 3rem 2rem;
     position: relative;
@@ -296,4 +297,80 @@
   border: 1px solid rgba(25, 128, 238, 0.1);
 }
 
+.portfolio .antigravity-card {
+    transition: transform 0.4s cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 0.4s ease, border-color 0.4s ease;
+}
 
+.portfolio .antigravity-card:hover{
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4), 0 0 15px rgba(25, 128, 238, 0.15);
+    backdrop-filter: blur(20px);
+    border-color: #93bdd0;
+    background-color: #334155;
+    opacity: 1;
+}
+
+/*
+  聯絡我
+*/
+.contact {
+  background-color: #93bdd0;
+  padding: 5px 0;
+  margin: 0;
+}
+
+.contact .info-area {
+  width: 50%;
+}
+
+.contact .form-area {
+  background-color: #dceaf6;
+  border-radius: 10px;
+  box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.1);
+  width: 50%;
+  padding: 0;
+}
+
+.contact .contact-form{
+  font-size: 21px;
+  font-family: var(--default-font);
+  padding: 50px;
+}
+
+.contact .contact-form #validationFullName {
+  border: 2px solid rgb(149, 184, 213);
+  border-radius: 10px;
+  width: 180%;
+  height: 5rem;
+  transition: all 0.5s;
+}
+
+.contact .contact-form #validationEmail {
+  border: 2px solid rgb(149, 184, 213);
+  border-radius: 10px;
+  width: 180%;
+  height: 5rem;
+  transition: all 0.5s;
+}
+
+.contact .contact-form #validationTextArea {
+  border: 2px solid rgb(149, 184, 213);
+  border-radius: 10px;
+  width: 88%;
+  height: 15rem;
+  transition: all 0.5s;
+}
+
+.contact .contact-form .invalidCheck2{
+  width: 120%;
+  height: 3rem;
+}
+
+.contact .contact-form .btn{
+  background-color: #1a1549;
+  border: none;
+  border-radius: 10px;
+  text-align: center;
+  width: 150px;
+  height: 3rem;
+}
