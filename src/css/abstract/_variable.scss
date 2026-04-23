@@ -1,6 +1,14 @@
+@font-face {
+    font-family: 'AbrilFatface-Regular';
+    src: url('/fonts/AbrilFatface-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
 $theme-vars: (
     "default-font": ("Noto Sans TC",  system-ui, apple-system, "Segoe UI", Roboto),
     "heading-font": ("Raleway",  sans-serif),
+    "sign-font": ("AbrilFatface-Regular", "Raleway"),
     "nav-font": ("Poppins",  sans-serif),
     "sidebar-width": 300px,
     "background-color": #ffffff,

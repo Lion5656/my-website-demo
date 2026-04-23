@@ -1,6 +1,7 @@
 import '../css/main.scss';
 
 // 引入 Bootstrap JS
+import 'bootstrap/dist/css/bootstrap.min.css'
 import * as bootstrap from 'bootstrap'
 import Typed from 'typed.js';
 

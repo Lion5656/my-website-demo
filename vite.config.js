@@ -3,8 +3,9 @@ import path from 'path';
 
 export default defineConfig({
     root: path.resolve(__dirname, './'),
+    base: './',
     build: {
-        outDir: '../dist'
+        outDir: 'dist'
     },
     server: {
         port: 5173,
