@@ -1,6 +1,13 @@
 /*
   背景顏色
 */
+@font-face {
+  font-family: 'AbrilFatface-Regular';
+  src: url('@/assets/font/AbrilFatface-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
 
 .light-background {
   --background-color: #f4fafd;
